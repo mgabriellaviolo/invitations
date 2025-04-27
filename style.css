@@ -1,80 +1,137 @@
+/* style.css */
 body {
     margin: 0;
     padding: 0;
+    background-image: url('invitacion.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-attachment: scroll;
     font-family: 'Cormorant Garamond', serif;
-    background: url('invitacion.png') no-repeat center center fixed;
-    background-size: cover;
-    background-color: #f9f7f4;
-}
-
-.invitation {
-    background: rgba(255, 255, 255, 0.7);
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 20px;
+    color: #4B4B4B;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    line-height: 1.8; /* MÁS ESPACIO ENTRE LÍNEAS */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.content h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 32px;
-    color: #4a4a4a;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #666;
+.container {
+    background: rgba(255, 255, 255, 0.7);
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
 }
 
 h1 {
-    font-size: 36px;
-    margin: 20px 0;
-    color: #2f2f2f;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    margin: 0.5rem 0;
+    font-weight: normal;
 }
 
-.details p {
-    margin: 5px 0;
-    font-size: 18px;
-    color: #555;
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    font-weight: normal;
 }
 
-.rsvp {
-    margin-top: 30px;
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: normal;
+    color: #4B4B4B;
 }
 
-.rsvp h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #444;
+p {
+    font-size: 1.2rem;
+    margin: 0.7rem 0;
+}
+
+.date {
+    font-size: 2.5rem;
+    color: #557153;
+    margin: 1rem 0;
+}
+
+.small {
+    font-size: 1rem;
+    color: #6d6d6d;
 }
 
 .rsvp-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #2e7d32;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.3rem;
+    background-color: #557153;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .rsvp-button:hover {
-    background-color: #1b5e20;
+    background-color: #445942;
 }
 
-.gift {
-    margin-top: 40px;
-    font-size: 16px;
-    color: #555;
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 10;
+    max-width: 400px;
+    width: 90%;
 }
 
-.gift strong {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 18px;
+.form-popup input, .form-popup button {
+    margin: 0.7rem 0;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+}
+
+.form-popup button[type="submit"] {
+    background-color: #557153;
+    color: white;
+    border: none;
+}
+
+.form-popup button[type="submit"]:hover {
+    background-color: #445942;
+}
+
+.form-popup button[type="button"] {
+    background-color: transparent;
+    color: #557153;
+    border: 1px solid #557153;
+}
+
+.form-popup button[type="button"]:hover {
+    background-color: #f1f1f1;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
 }
