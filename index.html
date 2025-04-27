@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Invitación de Boda</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,28 +25,41 @@
 
     <p class="location">Salón Casa Blanca<br>Maturín, Monagas</p>
 
-    <form id="rsvp-form">
-      <input type="text" name="name" placeholder="Tu nombre" required>
-      <input type="number" name="guests" placeholder="# Acompañantes" required min="0">
-      <button type="submit">Confirmar Asistencia</button>
-    </form>
+    <button class="rsvp-button" onclick="openRSVP()">RSVP</button>
 
-    <p class="gift-text">
-      Tu presencia es nuestro mayor regalo<br>
-      Pero si deseas tener un detalle con nosotros, haz click <a href="#">aquí</a>.
-    </p>
+    <div class="gift-text">
+      <p>Tu presencia es nuestro mayor regalo.<br>
+      Pero si deseas tener un detalle con nosotros puedes realizarlo a través de Zelle, Bizum, Pago Móvil o Transferencia.</p>
+    </div>
+  </div>
 
-    <div id="thank-you" style="display:none;">¡Gracias por confirmar tu asistencia!</div>
+  <!-- Modal RSVP -->
+  <div id="rsvp-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRSVP()">&times;</span>
+      <h2>Confirma tu Asistencia</h2>
+      <form id="rsvp-form">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="number" name="guests" placeholder="# Acompañantes" min="0" required>
+        <textarea name="message" placeholder="Mensaje para los novios (opcional)"></textarea>
+        <button type="submit">Confirmar</button>
+      </form>
+      <div id="thank-you" style="display:none;">¡Gracias por confirmar tu asistencia!</div>
+    </div>
   </div>
 
   <script>
+    function openRSVP() {
+      document.getElementById('rsvp-modal').style.display = "block";
+    }
+    function closeRSVP() {
+      document.getElementById('rsvp-modal').style.display = "none";
+    }
     const form = document.getElementById('rsvp-form');
-    const thankYou = document.getElementById('thank-you');
-
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       form.style.display = 'none';
-      thankYou.style.display = 'block';
+      document.getElementById('thank-you').style.display = 'block';
     });
   </script>
 </body>
