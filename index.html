@@ -3,36 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Invitación de Boda - Maria & Carlos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <title>Invitación de Boda</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="invitation">
-    <h2>Nuestra Boda</h2>
-    <p class="intro">Queremos invitarte a disfrutar con nosotros este día tan especial...</p>
+  <div class="background"></div>
 
-    <h1>Carlos Daniel Giusto<br>&<br>Maria Gabriella Violo</h1>
+  <div class="container">
+    <h2 class="subtitle">Nuestra Boda</h2>
+    <p class="invite-text">Queremos invitarte a disfrutar con nosotros este día tan especial...</p>
+    <h1 class="names">Carlos Daniel Giusto<br>&<br>Maria Gabriella Violo</h1>
 
     <div class="date-time">
-      <div class="day">SÁBADO</div>
-      <div class="date-box">
-        <span class="month">DICIEMBRE</span>
-        <span class="day-number">27</span>
-        <span class="year">2025</span>
-      </div>
-      <div class="time">07:00 PM</div>
+      <div>Sábado</div>
+      <div class="big-number">27</div>
+      <div>Diciembre 2025</div>
+      <div>07:00 PM</div>
     </div>
 
     <p class="location">Salón Casa Blanca<br>Maturín, Monagas</p>
 
-    <p class="guest-name">&lt;nombre del invitado&gt;</p>
-    <p class="companions"># Acompañantes:</p>
+    <form id="rsvp-form">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="number" name="guests" placeholder="# Acompañantes" required min="0">
+      <button type="submit">Confirmar Asistencia</button>
+    </form>
 
-    <p class="confirm">Agradeceremos su confirmación de asistencia antes del 01 de Noviembre 2025</p>
+    <p class="gift-text">
+      Tu presencia es nuestro mayor regalo<br>
+      Pero si deseas tener un detalle con nosotros, haz click <a href="#">aquí</a>.
+    </p>
 
-    <p class="gift">Tu presencia es nuestro mayor regalo.<br>
-    Pero si deseas tener un detalle con nosotros, puedes hacerlo siguiendo este link:</p>
+    <div id="thank-you" style="display:none;">¡Gracias por confirmar tu asistencia!</div>
   </div>
+
+  <script>
+    const form = document.getElementById('rsvp-form');
+    const thankYou = document.getElementById('thank-you');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
