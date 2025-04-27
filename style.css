@@ -1,99 +1,109 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f9f9f9;
-  color: #4a4a4a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
+  position: relative;
+  background: #f8f8f8;
+  overflow-x: hidden;
 }
 
-.invitation {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
+.background {
+  background: url('assets/invitacion.png') no-repeat center center/cover;
+  filter: brightness(0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.container {
   max-width: 600px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  margin-top: 30px;
+  animation: fadeIn 2s ease-in;
 }
 
-h1 {
+.subtitle {
   font-family: 'Great Vibes', cursive;
-  font-size: 48px;
-  color: #4e6b4b; /* Eucalyptus green */
-  margin: 20px 0;
+  font-size: 2rem;
+  color: #5a6d5a;
 }
 
-h2 {
-  font-weight: 300;
-  font-size: 24px;
-  margin-bottom: 10px;
+.invite-text {
+  margin: 10px 0 20px;
   color: #666;
 }
 
-.intro {
-  font-size: 16px;
-  margin-bottom: 30px;
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #5a6d5a;
+  margin-bottom: 20px;
 }
 
 .date-time {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 30px 0;
-  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
 }
 
-.day, .time {
-  font-size: 16px;
-}
-
-.date-box {
-  background-color: #f0f7f3;
-  border: 2px solid #6c8a61;
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.month {
-  font-size: 14px;
-  color: #6c8a61;
-}
-
-.day-number {
-  font-size: 36px;
-  color: #4e6b4b;
-}
-
-.year {
-  font-size: 14px;
-  color: #6c8a61;
+.big-number {
+  font-size: 3rem;
+  color: #5a6d5a;
 }
 
 .location {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.guest-name, .companions {
-  margin-top: 20px;
-  font-size: 18px;
-  font-style: italic;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.confirm {
+input, button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #5a6d5a;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #5a6d5a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3f5240;
+}
+
+.gift-text {
   margin-top: 30px;
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #666;
 }
 
-.gift {
-  margin-top: 30px;
-  font-size: 16px;
-  color: #444;
+a {
+  color: #5a6d5a;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
