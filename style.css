@@ -7,86 +7,98 @@
 body, html {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background: #f8f8f8;
+  background: #fff8f0;
   overflow-x: hidden;
 }
 
 .background {
   background: url('assets/invitacion.png') no-repeat center center/cover;
-  filter: brightness(0.9);
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: -1;
+  opacity: 0.9;
 }
 
 .container {
   max-width: 600px;
   margin: auto;
   padding: 2rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid #d4af37; /* dorado */
+  border-radius: 25px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  margin-top: 30px;
   animation: fadeIn 2s ease-in;
 }
 
 .subtitle {
   font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  color: #5a6d5a;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  color: #d4af37;
+  margin-bottom: 20px;
 }
 
 .invite-text {
-  margin: 10px 0 20px;
-  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #5a5a5a;
 }
 
 .names {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #5a6d5a;
-  margin: 20px 0;
+  margin: 30px 0;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background-color: #d4af37;
+  margin: 20px auto;
 }
 
 .date-time {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #5a5a5a;
   margin-bottom: 20px;
-  color: #444;
 }
 
 .big-number {
-  font-size: 3rem;
-  color: #5a6d5a;
+  font-size: 4rem;
+  color: #d4af37;
 }
 
 .location {
-  margin-bottom: 30px;
-  color: #333;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #5a5a5a;
 }
 
 .rsvp-button {
-  background-color: #5a6d5a;
+  background: linear-gradient(90deg, #d4af37, #b8860b);
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-size: 1.1rem;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-top: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s;
 }
 
 .rsvp-button:hover {
-  background-color: #3f5240;
+  transform: scale(1.05);
 }
 
 .gift-text {
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #666;
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #5a5a5a;
 }
 
 /* Modal Styles */
@@ -107,7 +119,7 @@ body, html {
   background-color: #fff;
   margin: auto;
   padding: 20px;
-  border: 1px solid #5a6d5a;
+  border: 2px solid #d4af37;
   width: 90%;
   max-width: 400px;
   border-radius: 20px;
@@ -132,7 +144,7 @@ input, textarea, button {
   margin: 10px 0;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #5a6d5a;
+  border: 1px solid #d4af37;
 }
 
 textarea {
@@ -140,14 +152,14 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: #5a6d5a;
+  background: linear-gradient(90deg, #d4af37, #b8860b);
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s;
 }
 
 button[type="submit"]:hover {
-  background-color: #3f5240;
+  transform: scale(1.05);
 }
 
 @keyframes fadeIn {
