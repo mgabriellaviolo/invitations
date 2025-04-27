@@ -7,7 +7,6 @@
 body, html {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  position: relative;
   background: #f8f8f8;
   overflow-x: hidden;
 }
@@ -38,6 +37,7 @@ body, html {
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
   color: #5a6d5a;
+  margin-bottom: 10px;
 }
 
 .invite-text {
@@ -49,7 +49,7 @@ body, html {
   font-family: 'Great Vibes', cursive;
   font-size: 2.5rem;
   color: #5a6d5a;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .date-time {
@@ -68,27 +68,18 @@ body, html {
   color: #333;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, button {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #5a6d5a;
-  border-radius: 10px;
-}
-
-button {
+.rsvp-button {
   background-color: #5a6d5a;
   color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:hover {
+.rsvp-button:hover {
   background-color: #3f5240;
 }
 
@@ -98,9 +89,65 @@ button:hover {
   color: #666;
 }
 
-a {
-  color: #5a6d5a;
-  text-decoration: underline;
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #5a6d5a;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: black;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #5a6d5a;
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  background-color: #5a6d5a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #3f5240;
 }
 
 @keyframes fadeIn {
