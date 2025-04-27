@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('invitacion.png');
+    background-image: url('assets/invitacion.png');
     background-size: contain;
     background-repeat: repeat-y;
     background-position: center top;
