@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f9f8; /* Soft white */
+  color: #4a4a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.invitation {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #6c8a61; /* Eucalyptus green */
+  margin-bottom: 10px;
+}
+
+.date, .location {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #4a4a4a;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.rsvp-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #6c8a61;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.rsvp-button:hover {
+  background-color: #5a7250;
+}
