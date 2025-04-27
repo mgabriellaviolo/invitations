@@ -1,71 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Carlos & Maria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-  <div class="background"></div>
+    <div class="invitation">
+        <div class="content">
+            <h2>Nuestra Boda</h2>
+            <p class="subtitle">Queremos invitarte a disfrutar con nosotros este día tan especial...</p>
+            <h1>Carlos Daniel Giusto <br>&<br> Maria Gabriella Violo</h1>
 
-  <div class="container">
-    <h2 class="subtitle">Nuestra Boda</h2>
-    <p class="invite-text">Con mucho amor queremos invitarte a celebrar con nosotros este día tan especial en nuestras vidas.</p>
+            <div class="details">
+                <p><strong>Sábado</strong></p>
+                <p>27 de Diciembre 2025</p>
+                <p>07:00 PM</p>
+                <p>Salón Casa Blanca</p>
+                <p>Maturín, Monagas</p>
+            </div>
 
-    <h1 class="names">Carlos Daniel Giusto<br>&<br>Maria Gabriella Violo</h1>
+            <div class="rsvp">
+                <h3>RSVP</h3>
+                <p>Confirma tu asistencia antes del 01 de Noviembre 2025</p>
+                <a href="https://forms.gle/tu-formulario" target="_blank" class="rsvp-button">Confirmar Asistencia</a>
+            </div>
 
-    <div class="divider"></div>
-
-    <div class="date-time">
-      <div>Sábado</div>
-      <div class="big-number">27</div>
-      <div>Diciembre 2025</div>
-      <div>07:00 PM</div>
+            <div class="gift">
+                <p><strong>Tu presencia es nuestro mayor regalo</strong></p>
+                <p>Pero si deseas tener un detalle con nosotros puedes hacerlo a través de Zelle, Bizum, Pago Móvil o Transferencia.</p>
+            </div>
+        </div>
     </div>
-
-    <div class="divider"></div>
-
-    <p class="location">Salón Casa Blanca<br>Maturín, Monagas</p>
-
-    <button class="rsvp-button" onclick="openRSVP()">RSVP</button>
-
-    <div class="gift-text">
-      <p>Tu presencia es nuestro mayor regalo.<br>
-      Si deseas tener un detalle, puedes hacerlo a través de Zelle, Bizum, Pago Móvil o Transferencia.</p>
-    </div>
-  </div>
-
-  <!-- Modal RSVP -->
-  <div id="rsvp-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeRSVP()">&times;</span>
-      <h2>Confirma tu Asistencia</h2>
-      <form id="rsvp-form">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="number" name="guests" placeholder="# Acompañantes" min="0" required>
-        <textarea name="message" placeholder="Mensaje para los novios (opcional)"></textarea>
-        <button type="submit">Confirmar</button>
-      </form>
-      <div id="thank-you" style="display:none;">¡Gracias por confirmar tu asistencia!</div>
-    </div>
-  </div>
-
-  <script>
-    function openRSVP() {
-      document.getElementById('rsvp-modal').style.display = "block";
-    }
-    function closeRSVP() {
-      document.getElementById('rsvp-modal').style.display = "none";
-    }
-    const form = document.getElementById('rsvp-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      form.style.display = 'none';
-      document.getElementById('thank-you').style.display = 'block';
-    });
-  </script>
 </body>
 </html>
