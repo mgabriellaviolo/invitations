@@ -11,25 +11,43 @@
             background-size: cover;
             font-family: 'Great Vibes', cursive;
         }
-        .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            padding-bottom: 100px;
+
+        .rsvp-button {
+            display: block;
+            margin: 20px auto 0 auto;
+            padding: 10px 20px;
+            background-color: #4A5A3D;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 24px;
+            font-family: 'Great Vibes', cursive;
+            cursor: pointer;
         }
-        form {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 20px;
-            border-radius: 15px;
+
+        .rsvp-form-container {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .rsvp-form {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4A5A3D;
             max-width: 400px;
             width: 90%;
         }
+
         input[type="text"],
         input[type="number"] {
             width: 90%;
@@ -41,6 +59,7 @@
             font-size: 18px;
             background-color: #ffffffd9;
         }
+
         input[type="submit"] {
             background-color: #4A5A3D;
             color: white;
@@ -52,24 +71,42 @@
             margin-top: 10px;
             font-family: 'Great Vibes', cursive;
         }
-        input[type="submit"]:hover {
-            background-color: #3b4d30;
-        }
-        h2 {
-            margin-bottom: 10px;
-            font-size: 28px;
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 30px;
             color: #4A5A3D;
+            cursor: pointer;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <form action="https://formspree.io/f/{your-form-id}" method="POST">
+
+    <!-- RSVP Button -->
+    <button class="rsvp-button" onclick="openRSVP()">RSVP</button>
+
+    <!-- RSVP Popup Form -->
+    <div class="rsvp-form-container" id="rsvpForm">
+        <form class="rsvp-form" action="https://formspree.io/f/{your-form-id}" method="POST">
+            <button type="button" class="close-btn" onclick="closeRSVP()">×</button>
             <h2>RSVP</h2>
             <input type="text" name="nombre" placeholder="Tu nombre" required><br>
             <input type="number" name="acompanantes" placeholder="Número de acompañantes" min="0" required><br>
             <input type="submit" value="Confirmar asistencia">
         </form>
     </div>
+
+    <script>
+        function openRSVP() {
+            document.getElementById('rsvpForm').style.display = 'flex';
+        }
+
+        function closeRSVP() {
+            document.getElementById('rsvpForm').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
